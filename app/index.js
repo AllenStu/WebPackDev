@@ -1,3 +1,11 @@
 var angular = require('angular');
 
-angular.module('myApp', []);
+var myModule = angular.module('myApp', [
+  require('./searchMovie/index').name
+]);
+
+myModule.controller('myController', myController);
+
+function myController($scope) {
+  $scope.myVar = 'Search';
+}

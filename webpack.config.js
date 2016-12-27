@@ -1,4 +1,5 @@
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var webpack = require('webpack');
 
 module.exports = {
     context: __dirname + "/app",
@@ -12,5 +13,19 @@ module.exports = {
         template: 'index.html', // Load a custom template
         inject: 'body' // Inject all scripts into the body
       })
-    ]
+    ],
+    module: {
+      loaders: [
+        {
+          test: /\.js$/,
+          loader: 'ng-annotate',
+          exclude: [/node_modules/]
+        },
+        {
+          test: /\.html$/,
+          loader: 'raw',
+          exclude: [/node_modules/]
+        }
+      ]
+    }
 }
