@@ -1,0 +1,22 @@
+{
+  "name": "training_1",
+  "version": "1.0.0",
+  "description": "Training App",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "./node_modules/.bin/webpack-dev-server --config webpack.config.js --content-base app --inline --hot"
+  },
+  "author": "Darryl Ong",
+  "license": "ISC",
+  "devDependencies": {
+    "html-webpack-plugin": "^2.24.1",
+    "ng-annotate-loader": "^0.2.0",
+    "raw-loader": "^0.5.1",
+    "webpack": "^1.14.0",
+    "webpack-dev-server": "^1.16.2"
+  },
+  "dependencies": {
+    "angular": "^1.6.0"
+  }
+}
