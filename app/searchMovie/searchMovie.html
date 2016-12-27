@@ -1,0 +1,10 @@
+<form ng-submit="$ctrl.search()">
+  <input type="text" name="searchMovieBar" ng-model="$ctrl.searchTerm" />
+  <input type="submit" value="Search" />
+</form>
+<hr />
+<div ng-repeat="movie in $ctrl.results">
+  <img ng-src="{{movie.Poster}}" />
+  <h2 ng-bind="movie.Title" />
+  <h3 ng-bind="movie.Year" />
+</div>
