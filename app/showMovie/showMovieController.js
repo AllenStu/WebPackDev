@@ -1,5 +1,6 @@
 module.exports = ShowMovieController;
 
+/*@ngInject*/
 function ShowMovieController(showMovieService, $routeParams) {
   var vm = this;
 

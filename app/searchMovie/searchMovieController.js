@@ -1,5 +1,6 @@
 module.exports = SearchMovieController;
 
+/*@ngInject*/
 function SearchMovieController(searchMovieService, $location){
   var vm = this;
 

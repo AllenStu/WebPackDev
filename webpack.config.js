@@ -12,7 +12,8 @@ module.exports = {
       new HtmlWebpackPlugin({
         template: 'index.html', // Load a custom template
         inject: 'body' // Inject all scripts into the body
-      })
+      }),
+      new webpack.optimize.UglifyJsPlugin({minimize: true})
     ],
     module: {
       loaders: [
