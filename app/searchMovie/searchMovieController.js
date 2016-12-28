@@ -1,11 +1,12 @@
 module.exports = SearchMovieController;
 
-function SearchMovieController(searchMovieService){
+function SearchMovieController(searchMovieService, $location){
   var vm = this;
 
   vm.searchTerm = '';
   vm.search = search;
   vm.results = [];
+  vm.goToMovieDetails = goToMovieDetails;
 
   function search() {
     searchMovieService.searchMovie(vm.searchTerm).then(
@@ -13,5 +14,9 @@ function SearchMovieController(searchMovieService){
         angular.copy(results,vm.results);
       }
     );
+  }
+
+  function goToMovieDetails(movieId) {
+    $location.path('/details/' + movieId);
   }
 }

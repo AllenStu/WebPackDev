@@ -18,5 +18,3 @@ function searchMovieService($http) {
     });
   }
 }
-
-//searchMovieService.$inject = ['$http'];

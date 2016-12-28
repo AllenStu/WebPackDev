@@ -1,11 +1,10 @@
 var angular = require('angular');
+require('angular-route');
 
 var myModule = angular.module('myApp', [
-  require('./searchMovie/index').name
+  "ngRoute",
+  require('./searchMovie/index').name,
+  require('./showMovie/index').name
 ]);
 
-myModule.controller('myController', myController);
-
-function myController($scope) {
-  $scope.myVar = 'Search';
-}
+require('./routes')(myModule);
