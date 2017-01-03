@@ -1,0 +1,11 @@
+<form ng-submit="$ctrl.search()">
+    <input type="text" name="searchMovieBar" ng-model="$ctrl.searchTerm" />
+    <input type="submit" value="Search" />
+</form>
+<hr />
+<div ng-repeat="movie in $ctrl.results">
+    <img ng-src="{{movie.Poster}}" />
+    <h2 ng-bind="movie.Title" ></h2>
+    <h3 ng-bind="movie.Year" ></h3>
+    <input type="button" value="Show Details" ng-click="$ctrl.goToMovieDetails(movie.imdbID)"/>
+</div>
