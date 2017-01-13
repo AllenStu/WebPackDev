@@ -1,11 +1,63 @@
-<form ng-submit="$ctrl.search()">
-  <input type="text" name="searchMovieBar" ng-model="$ctrl.searchTerm" />
-  <input type="submit" value="Search" />
-</form>
-<hr />
-<div ng-repeat="movie in $ctrl.results">
-  <img ng-src="{{movie.Poster}}" />
-  <h2 ng-bind="movie.Title"></h2>
-  <h4 ng-bind="movie.Year"></h4>
-  <input type="button" value="Show Details" ng-click="$ctrl.goToMovieDetails(movie.imdbID)" />
+
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <span class="mdl-layout-title">Logo</span>
+      <div class="mdl-layout-spacer"></div>
+      <nav class="mdl-navigation mdl-layout--large-screen-only">
+        <a class="mdl-navigation__link" href="">Link</a>
+        <a class="mdl-navigation__link" href="">Link</a>
+        <a class="mdl-navigation__link" href="">Link</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="md-layout__drawer">
+    <span class="mdl-layout-title"> Logo</span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="">Link</a>
+      <a class="mdl-navigation__link" href="">Link</a>
+      <a class="mdl-navigation__link" href="">Link</a>
+    </nav>
+  </div>
+
+  <main class="mdl--layout__content">
+    <div class="page-content">
+      <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--6-col">CS6</div>
+        <div class="mdl-cell mdl-cell--4-col">CS4</div>
+        <div class="mdl-cell mdl-cell--2-col">CS2</div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="mdl-mini-footer">
+    <div class="mdl-mini-footer--left-section">
+      <div class="mdl-logo">Logo</div>
+      <ul class="mdl-mini-footer--link-list">
+        <li><a href="#">Help</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!--<form ng-submit="$ctrl.search()">-->
+  <!--<input type="text" name="searchMovieBar" ng-model="$ctrl.searchTerm" />-->
+  <!--<input type="submit" value="Search" />-->
+  <!--<button class="mdl-button mdl-js-button mdl-button&#45;&#45;fab mdl-button&#45;&#45;colored">-->
+  <!--<i class="material-icons">search</i>-->
+  <!--</button>-->
+  <!--</form>-->
+
+  <!--<hr />-->
+
+  <!--<div ng-repeat="movie in $ctrl.results">-->
+  <!--<img ng-src="{{movie.Poster}}" />-->
+  <!--<h2 ng-bind="movie.Title"></h2>-->
+  <!--<h4 ng-bind="movie.Year"></h4>-->
+  <!--<input type="button" value="Show Details" ng-click="$ctrl.goToMovieDetails(movie.imdbID)" />-->
+  <!--</div>-->
+
 </div>
+
