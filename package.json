@@ -1,13 +1,13 @@
 {
-  "name": "training_1",
+  "name": "webpack-and-angular",
   "version": "1.0.0",
-  "description": "Training App",
+  "description": "Training Lesson",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "./node_modules/.bin/webpack-dev-server --config webpack.config.js --content-base app --inline --hot"
   },
-  "author": "Darryl Ong",
+  "author": "allen",
   "license": "ISC",
   "devDependencies": {
     "angular-animate": "^1.6.1",

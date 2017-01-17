@@ -6,3 +6,4 @@ require('./searchMovieService')(myModule);
 require('./searchMovieComponent')(myModule);
 
 module.exports = myModule;
+

@@ -6,3 +6,4 @@ require('./showMovieService')(myModule);
 require('./showMovieComponent')(myModule);
 
 module.exports = myModule;
+

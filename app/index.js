@@ -11,3 +11,4 @@ var myModule = angular.module('myApp', [
 ]);
 
 require('./routes')(myModule);
+

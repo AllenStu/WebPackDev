@@ -6,7 +6,7 @@ function ShowMovieController(showMovieService, $routeParams) {
 
   init();
 
-  //function defiinitions below
+  //function definitions below
   function init(){
     showMovieService.getMovie($routeParams.movieId).then(function(data){
       vm.movie = data;

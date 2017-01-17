@@ -2,8 +2,8 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 var webpack = require('webpack');
 
 module.exports = {
-    context: __dirname + "/app",
-    entry: "./index",
+    context: __dirname + "/app", // This is an absolute path to your application’s source files.
+    entry: "./index",  // The main file that bootstraps your Angular application. This generates multiple bundle files.
     output: {
         path: __dirname + "/dist",
         filename: "bundle.js"
