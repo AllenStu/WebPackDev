@@ -1,72 +1,33 @@
-<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs">
-
-  <header class="mdl-layout__header">
-    <div class="mdl-layout__header-row">
-      <!-- Title -->
-      <span class="mdl-layout-title">Logo</span>
-      <!-- Add spacer, to align navigation to the right -->
-      <!--<div class="mdl-layout-spacer"></div>-->
-      <!--&lt;!&ndash; Navigation &ndash;&gt;-->
-      <!--<nav class="mdl-navigation">-->
-        <!--<a class="mdl-navigation__link" href="">Link</a>-->
-        <!--<a class="mdl-navigation__link" href="">Link</a>-->
-        <!--<a class="mdl-navigation__link" href="">Link</a>-->
-        <!--<a class="mdl-navigation__link" href="">Link</a>-->
-      <!--</nav>-->
-    </div>
-
-  </header>
-
-  <div class="mdl-layout__drawer">
-    <span class="mdl-layout-title">Title</span>
-    <nav class="mdl-navigation">
-      <a class="mdl-navigation__link" href="">Link</a>
-      <a class="mdl-navigation__link" href="">Link</a>
-      <a class="mdl-navigation__link" href="">Link</a>
-      <a class="mdl-navigation__link" href="">Link</a>
-    </nav>
+<div class="page-content">
+  <div class="mdl-grid">
+    <form ng-submit="$ctrl.search()">
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+        <input class="mdl-textfield__input" type="text" id="searchMovieBar" name="searchMovieBar" ng-model="$ctrl.searchTerm" >
+        <label class="mdl-textfield__label" >Movie title</label>
+      </div>
+      <!--<button class="mdl-button mdl-js-button mdl-button&#45;&#45;raised mdl-js-ripple-effect mdl-button&#45;&#45;accent" type="submit" value="Search" >Search1</button>-->
+      <button class="mdl-button mdl-js-button mdl-button--fab" type="submit" value="Search" >
+        <i class="material-icons">search</i>
+      </button>
+    </form>
   </div>
 
-  <main class="mdl--layout__content">
-    <div class="page-content">
-
-      <div class="mdl-grid">
-        <form ng-submit="$ctrl.search()">
-          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <input class="mdl-textfield__input" type="text" id="searchMovieBar" name="searchMovieBar" ng-model="$ctrl.searchTerm" >
-            <label class="mdl-textfield__label" >Movie title</label>
-          </div>
-          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit" value="Search" >Search1</button>
-        </form>
-      </div>
-
-      <div class="mdl-card mdl-shadow--2dp demo-card-square" ng-repeat="movie in $ctrl.results">
-        <!-- Media -->
-        <div class="md-card__media">
-          <img ng-src="{{movie.Poster}}" width="310" height="450" border="0" alt="" style="padding:10px;">
-        </div>
-        <!-- Supporting Text -->
-        <div class="mdl-card__supporting-text" ng-bind="movie.Title"></div>
-        <!-- Actions -->
-        <div class="mdl-card__actions mdl-card--border">
-          <a class="mdl-button mdl-button--accent mdl-js-button mdl-js-ripple-effect" ng-click="$ctrl.goToMovieDetails(movie.imdbID)">
-            Show Details
-          </a>
-        </div>
-      </div>
-
+  <div class="mdl-card mdl-shadow--2dp demo-card-square" ng-repeat="movie in $ctrl.results">
+    <!-- Media -->
+    <div class="md-card__media">
+      <img ng-src="{{movie.Poster}}" width="310" height="450" border="0" alt="" style="padding:10px;">
     </div>
-  </main>
 
-  <footer class="mdl-mini-footer">
-    <div class="mdl-mini-footer--left-section">
-      <div class="mdl-logo">Logo</div>
-      <ul class="mdl-mini-footer--link-list">
-        <li><a href="#">Help</a></li>
-        <li><a href="#">About</a></li>
-      </ul>
+    <!-- Supporting Text -->
+    <div class="mdl-card__supporting-text" ng-bind="movie.Title"></div>
+
+    <!-- Actions -->
+    <div class="mdl-card__actions mdl-card--border">
+      <a class="mdl-button mdl-button--accent mdl-js-button mdl-js-ripple-effect" ng-click="$ctrl.goToMovieDetails(movie.imdbID)">
+        Show Details
+      </a>
     </div>
-  </footer>
+  </div>
+
 </div>
-
 
